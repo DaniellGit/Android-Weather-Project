@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131214">
+
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="310dp"
+        android:layout_height="76dp"
+        android:src="@drawable/sweather"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btnExit"
+        app:layout_constraintTop_toBottomOf="@id/logoImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Add a TextView for FAQ content -->
+        <TextView
+            android:id="@+id/faqContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question 1: What is this app about?\n\nAnswer 1: This app provides accurate weather forecasts for locations worldwide.\n\n
+Question 2: How do I add a new location?\n\nAnswer 2: To add a new location, click the search icon and enter the city or town name.\n\n
+Question 3: If I forgot my password when i'm trying to log in can i reset it?\n\nAnswer 3: Yes, you can reset your password at the log in page, when you already filled your information you gonna received an email to reset your password from us.\n\n
+Question 4: Is the app available in multiple languages?\n\nAnswer 4: Yes, the app supports several languages. You can change the language in the settings.\n\n
+Question 5: How often is the weather data updated?\n\nAnswer 5: Weather data is updated every hour to ensure accuracy and reliability.\n\n
+Question 6: Can I view the weather offline?\n\nAnswer 6: While some features require an internet connection, you can view previously fetched data offline.\n\n"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:textColor="#FFFFFF"
+            tools:ignore="HardcodedText"
+            />
+
+    </ScrollView>
+
+    <!-- Add an Exit button below the ScrollView -->
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exit"
+        android:backgroundTint="#424242"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
